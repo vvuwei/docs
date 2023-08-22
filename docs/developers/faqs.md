@@ -23,7 +23,7 @@ we see on Mainnet.
 **A:** We plan to launch with the following parameters:
 
 * UnbondingTime = 3 weeks
-* MaxValidators = 75
+* MaxValidators = 100
 * KeyMaxEntries = 7
 * HistoricalEntries = 3
 * BondDenom = TIA
@@ -222,7 +222,7 @@ Mainnet launch.
 
 **Q:** How many Mainnet validators will there be?
 
-**A:** The final number of Mainnet validators is 75.
+**A:** The final number of Mainnet validators is 100.
 
 ---
 
