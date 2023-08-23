@@ -182,7 +182,7 @@ Tokens are at risk of slashing but never leave the wallet, so the owner of the
 tokens always have custody of its coins.
 
 **A:** Correct the tokens do not leave the delegator’s wallet. Learn more
-[here](https://everstake.one/learn-about-staking-wiki/cosmos-delegation).
+[here](https://hub.cosmos.network/main/delegators/delegator-faq.html).
 
 ---
 
