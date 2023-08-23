@@ -5,6 +5,30 @@ description: FAQs about the Celestia network.
 
 # Frequently Asked Questions
 
+This page answers frequently asked questions (FAQs) about the Celestia network
+and ecosystem.
+
+## Table of Contents
+
+1. [Frequently Asked Questions](#frequently-asked-questions)
+    1. [Networks](#networks)
+    2. [Deviations from Cosmos SDK](#deviations-from-cosmos-sdk)
+    3. [Ongoing Development & Versioning](#ongoing-development--versioning)
+    4. [Transaction parameters & serialization](#transaction-parameters--serialization)
+        1. [Transaction encoding and decoding](#transaction-encoding-and-decoding)
+        2. [Gas](#gas)
+    5. [Staking](#staking)
+    6. [Consensus](#consensus)
+        1. [Block production](#block-production)
+    7. [Developers](#developers)
+        1. [Prefixes for address generation](#prefixes-for-address-generation)
+        2. [Precision of the Currency](#precision-of-the-currency)
+        3. [Explorers](#explorers)
+        4. [RPC and address state](#rpc-and-address-state)
+    8. [Custodians](#custodians)
+    9. [Vesting](#vesting)
+    10. [Governance](#governance)
+
 ## Networks
 
 **Q:** Which network should I join?
@@ -238,6 +262,20 @@ Mainnet launch.
 that "enough" is not a fixed amount; it's determined by who stakes more or
 receives more delegations.
 
+### Block production
+
+**Q:** Is block producer selection deterministic or random? Any references
+to the exact code where this is happening is also helpful.
+
+**A:** Block producer selection is deterministic given our use of CometBFT
+(fka Tendermint) for Consensus.
+
+---
+
+**Q:** Is there information available about the issuance rate for block rewards?
+
+**A:** There is no information on the issuance rate for block rewards yet.
+
 ## Developers
 
 **Q:** Can I use cosmjs for Celestia integration into TypeScript or JavaScript?
@@ -275,20 +313,6 @@ landing page:
 
 * [Arabica devnet](../../nodes/arabica-devnet)
 * [Mocha testnet](../../nodes/mocha-testnet)
-
-### Block production
-
-**Q:** Is block producer selection deterministic or random? Any references
-to the exact code where this is happening is also helpful.
-
-**A:** Block producer selection is deterministic given our use of CometBFT
-(fka Tendermint) for Consensus.
-
----
-
-**Q:** Is there information available about the issuance rate for block rewards?
-
-**A:** There is no information on the issuance rate for block rewards yet.
 
 ### RPC and address state
 
