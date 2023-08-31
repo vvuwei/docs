@@ -18,7 +18,7 @@ function CustomVersionSelector({ className, versions }) {
         <option disabled>celestia-node version</option>
         {sortedVersions.map((version) => (
           <option key={version} value={`/api/${version === 'Next' ? 'next' : version}`}>
-            {version}
+            {"Version: " + version}
           </option>
         ))}
       </select>
