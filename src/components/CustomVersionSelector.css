@@ -2,7 +2,7 @@
 .custom-version-selector {
     display: inline-block;
     font-size: 1em;
-    color: inherit;
+    color: var(--ifm-menu-color);
     font-family: "Ruberoid", sans-serif;
     font-weight: 700;
 }
@@ -82,5 +82,11 @@
 @media (max-width: 996px) {
     .custom-version-selector-header {
         display: none;
+    }
+}
+
+@media (min-width: 997px) {
+    .custom-version-selector select {
+        color: var(--ifm-navbar-link-color);
     }
 }
