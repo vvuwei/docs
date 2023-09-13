@@ -11,23 +11,23 @@ and ecosystem.
 ## Table of Contents
 
 1. [Frequently Asked Questions](#frequently-asked-questions)
-    1. [Networks](#networks)
-    2. [Deviations from Cosmos SDK](#deviations-from-cosmos-sdk)
-    3. [Ongoing Development & Versioning](#ongoing-development--versioning)
-    4. [Transaction parameters & serialization](#transaction-parameters--serialization)
-        1. [Transaction encoding and decoding](#transaction-encoding-and-decoding)
-        2. [Gas](#gas)
-    5. [Staking](#staking)
-    6. [Consensus](#consensus)
-        1. [Block production](#block-production)
-    7. [Developers](#developers)
-        1. [Prefixes for address generation](#prefixes-for-address-generation)
-        2. [Precision of the Currency](#precision-of-the-currency)
-        3. [Explorers](#explorers)
-        4. [RPC and address state](#rpc-and-address-state)
-    8. [Custodians](#custodians)
-    9. [Vesting](#vesting)
-    10. [Governance](#governance)
+   1. [Networks](#networks)
+   2. [Deviations from Cosmos SDK](#deviations-from-cosmos-sdk)
+   3. [Ongoing Development & Versioning](#ongoing-development--versioning)
+   4. [Transaction parameters & serialization](#transaction-parameters--serialization)
+      1. [Transaction encoding and decoding](#transaction-encoding-and-decoding)
+      2. [Gas](#gas)
+   5. [Staking](#staking)
+   6. [Consensus](#consensus)
+      1. [Block production](#block-production)
+   7. [Developers](#developers)
+      1. [Prefixes for address generation](#prefixes-for-address-generation)
+      2. [Precision of the Currency](#precision-of-the-currency)
+      3. [Explorers](#explorers)
+      4. [RPC and address state](#rpc-and-address-state)
+   8. [Custodians](#custodians)
+   9. [Vesting](#vesting)
+   10. [Governance](#governance)
 
 ## Networks
 
@@ -46,12 +46,12 @@ we see on Mainnet.
 
 **A:** We plan to launch with the following parameters:
 
-* UnbondingTime = 3 weeks
-* MaxValidators = 100
-* KeyMaxEntries = 7
-* HistoricalEntries = 3
-* BondDenom = TIA
-* MinCommissionRate = 0.05 (5%)
+- UnbondingTime = 3 weeks
+- MaxValidators = 100
+- KeyMaxEntries = 7
+- HistoricalEntries = 3
+- BondDenom = TIA
+- MinCommissionRate = 0.05 (5%)
 
 ---
 
@@ -83,7 +83,7 @@ be released closer to launch when it is finalized.
 **Q:** What is your upgrade policy?
 
 **A:** Our upgrade policy is ultimately whatever the community determines,
-but we hope to see  updates regularly. However, we might not add new
+but we hope to see updates regularly. However, we might not add new
 functionality, meaning new standard modules are unlikely to be added unless
 explicitly decided on via community governance.
 
@@ -150,7 +150,7 @@ Celestia?
 **A:** `MsgPayForData` is not part of Cosmos, it is Celestia-specific. It has
 since been renamed to
 [`MsgPayForBlobs`](https://github.com/celestiaorg/celestia-app/blob/4135eddedaaa2728e96ab134fc8a479a71e487a2/proto/celestia/blob/v1/tx.proto#L16-L17).
- That's the only Celestia-specific message
+That's the only Celestia-specific message
 you should have to handle as a special case. We do use a custom TxDecoder
 [here](https://github.com/celestiaorg/celestia-app/blob/4135eddedaaa2728e96ab134fc8a479a71e487a2/app/encoding/encoding.go#L45-L47)
 which is defined
@@ -311,17 +311,17 @@ configs for our testnets and a rollup.
 **A:** View the options for explorers under the respective network's
 landing page:
 
-* [Arabica devnet](../../nodes/arabica-devnet)
-* [Mocha testnet](../../nodes/mocha-testnet)
+- [Arabica devnet](../../nodes/arabica-devnet)
+- [Mocha testnet](../../nodes/mocha-testnet)
 
 ### RPC and address state
 
 **Q:** Using these endpoints:
 
-* cosmos/distribution/{_version}/delegators/{address}/rewards
-* cosmos/staking/{_version}/delegators/{address}/unbonding_delegations
-* cosmos/staking/{_version}/delegations/{address}
-* cosmos/bank/{_version}/balances/{address}
+- cosmos/distribution/{\_version}/delegators/{address}/rewards
+- cosmos/staking/{\_version}/delegators/{address}/unbonding_delegations
+- cosmos/staking/{\_version}/delegations/{address}
+- cosmos/bank/{\_version}/balances/{address}
 
 Will the same endpoints be available on the celestia nodes? Will we have to
 account for other types of balances (such as vesting or locked) to support
