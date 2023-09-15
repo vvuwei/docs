@@ -67,8 +67,7 @@ Set seeds and peers:
 ```bash
 SEEDS="some seeds"
 PEERS="some peers"
-sed -i -e 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.celestia-app/config/config.toml
-sed -i -e "s/^seed_mode *=.*/seed_mode = \"$SEED_MODE\"/" $HOME/.celestia-app/config/config.toml
+sed -i -e 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent-peers *=.*|persistent-peers = "'$PEERS'"|' $HOME/.celestia-app/config/config.toml
 ```
 
 <PeersLink chainId={constants.mochaChainId} />
@@ -111,12 +110,18 @@ from the [chain-registry](https://github.com/cosmos/chain-registry).
 In `$HOME/.celestia-app/config/config.toml`, set
 
 ```toml
-rpc_servers = ""
-trust_height = 0
-trust_hash = ""
+rpc-servers = ""
+trust-height = 0
+trust-hash = ""
 ```
 
-to their respective fields. At least two different rpc endpoints should be provided.
+For example:
+  
+```toml
+rpc-servers = "full.consensus.mocha-4.celestia-mocha.com:26657"
+```
+
+to their respective fields. At least two different RPC endpoints should be provided.
 The more, the greater the chance of detecting any fraudulent behavior.
 
 Once setup, you should be ready to start the node as normal. In the logs, you should
@@ -178,7 +183,7 @@ required to be open on your machine.
 :::
 
 ```bash
-celestia-appd start
+celestia-appd start --chain-id mocha-4
 ```
 
 Follow the tutorial on setting up `celestia-app` as a background process
