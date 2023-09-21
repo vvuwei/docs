@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcelestia_docs=self.webpackChunkcelestia_docs||[]).push([[976],{4307:e=>{e.exports=JSON.parse('{"title":"Validators","slug":"/category/validators","permalink":"/category/validators","navigation":{"previous":{"title":"Consensus","permalink":"/category/consensus"},"next":{"title":"Validator node","permalink":"/nodes/validator-node"}}}')}}]);
